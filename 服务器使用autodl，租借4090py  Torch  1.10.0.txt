@@ -1,0 +1,9 @@
+服务器使用autodl，租借4090py  Torch  1.10.0     3.8(ubuntu20.04)
+
+
+测试文件传输到SDPS-Net-master/data/ToyPSDataset/
+
+输出在data/models/6-29_run_model,LCNet_CVPR2019,LCNet,NENet,UPS_Custom_Dataset,max,in_m-32,te_h-128,te_w-128,int_aug/test/Images/1_1_out.png,将这个图片传回本地，这个图片是序列图片，传回本地后将倒数第二幅剪裁出来，显示在qt界面上。
+
+运行指令：
+CUDA_VISIBLE_DEVICES=0 python eval/run_stage2.py --retrain data/models/LCNet_CVPR2019.pth.tar --retrain_s2 data/models/NENet_CVPR2019.pth.tar --benchmark UPS_Custom_Dataset --bm_dir data/ToyPSDataset/
